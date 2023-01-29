@@ -17,7 +17,6 @@ import {
     Collapse,
     ScrollArea,
   } from '@mantine/core';
-  import { MantineLogo } from '@mantine/ds';
   import { useDisclosure } from '@mantine/hooks';
   import {
     IconNotification,
@@ -27,6 +26,7 @@ import {
     IconFingerprint,
     IconCoin,
     IconChevronDown,
+    IconCoffee
   } from '@tabler/icons-react';
   
   const useStyles = createStyles((theme) => ({
@@ -102,24 +102,23 @@ import {
       <Box pb={120}>
         <Header height={60} px="md">
           <Group position="apart" sx={{ height: '100%' }}>
-            <MantineLogo size={30} />
+            <Text variant="text" style={{fontSize: "30px"}} ><b>&lt;P&gt;</b></Text>
   
             <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-              <a href="#" className={classes.link}>
+              <a href="/" className={classes.link}>
                 Home
               </a>
              
-              <a href="#" className={classes.link}>
-                Learn
+              <a href="https://p33t.net" className={classes.link}>
+                My Portfolio
               </a>
-              <a href="#" className={classes.link}>
-                Academy
+              <a href="https://github.com/itsP33t" className={classes.link}>
+                My Github
               </a>
             </Group>
   
             <Group className={classes.hiddenMobile}>
-              <Button variant="default">Log in</Button>
-              <Button>Sign up</Button>
+              <Button component="a" href={"https://ko-fi.com/p33tdev"}  variant="default" leftIcon={<IconCoffee></IconCoffee>} > Buy me a coffee</Button>
             </Group>
   
             <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
@@ -138,22 +137,21 @@ import {
           <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
             <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
   
-            <a href="#" className={classes.link}>
-              Home
-            </a>
-           
-            <a href="#" className={classes.link}>
-              Learn
-            </a>
-            <a href="#" className={classes.link}>
-              Academy
-            </a>
+            <a href="/" className={classes.link}>
+                Home
+              </a>
+             
+              <a href="https://p33t.net" className={classes.link}>
+                My Portfolio
+              </a>
+              <a href="https://github.com/itsP33t" className={classes.link}>
+                My Github
+              </a>
   
             <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
   
             <Group position="center" grow pb="xl" px="md">
-              <Button variant="default">Log in</Button>
-              <Button>Sign up</Button>
+            <Button component="a" href={"https://ko-fi.com/p33tdev"}  variant="default" leftIcon={<IconCoffee></IconCoffee>}> Buy me a coffee</Button>
             </Group>
           </ScrollArea>
         </Drawer>

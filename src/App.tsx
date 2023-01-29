@@ -1,15 +1,24 @@
 // imports
-import { MantineProvider, AppShell, Navbar, Header } from '@mantine/core';
+import { MantineProvider, AppShell, Navbar, Header, createStyles } from '@mantine/core';
 
 
  
-
+// scroll-behavior: smooth;
 
 // components
 import {HeaderMegaMenu} from './components/navbar';
+import {Hero} from './components/hero';
+
+
+const useStyles = createStyles((theme) => ({
+  main: {
+    scrollBehavior: 'smooth',
+  }
+}));
 
 
 export default function App() {
+  const { classes, theme } = useStyles();
   return (
     <MantineProvider theme={{
       colorScheme: "dark",
@@ -101,6 +110,7 @@ export default function App() {
         }
       }
     }} withGlobalStyles withNormalizeCSS >
+      <div style={{scrollBehavior: "smooth"}}>
       <AppShell
       padding="md"
       header={<Header height={5} p="xs">{<HeaderMegaMenu></HeaderMegaMenu>}</Header>}
@@ -108,8 +118,12 @@ export default function App() {
         main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
       })}
     >
-      
+      <div style={{height: "80px"}}></div>
+      <Hero></Hero>
+      <div style={{height: "15000px"}}></div>
+      <div id="main" ></div>
     </AppShell>
+    </div>
     </MantineProvider>
   );
 }
