@@ -2,23 +2,18 @@
 import {
   MantineProvider,
   AppShell,
-  Navbar,
   Header,
-  createStyles,
   SimpleGrid,
   Center,
   Card,
   Image,
   Text,
-  Badge,
   Button,
   Group,
-  Affix, 
-  Transition
 } from "@mantine/core";
 
-import { 
-  IconServerBolt, 
+import {
+  IconServerBolt,
   IconExternalLink,
   IconBrush,
   IconPalette,
@@ -33,203 +28,179 @@ import { MainFooter } from "./components/footer";
 import { AffixMain } from "./components/affix";
 
 // data
-import hostingData  from "./data/hosting";
+import hostingData from "./data/hosting";
 import bggenData from "./data/backgroundGen";
 import DesignAppData from "./data/DesignApp";
 import FontsData from "./data/Fonts";
 import IconsData from "./data/Icons";
 
-
 export default function App() {
+  // data mapping
 
-// data mapping
+  const hosting = hostingData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
 
-const hosting = hostingData.map((item) => (
-  <div>
-              <Center>
-                <Card shadow="sm" p="lg" radius="md">
-                  <Card.Section>
-                    <Image
-                      src={item.image}
-                      height={160}
-                      alt=""
-                    />
-                  </Card.Section>
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
 
-                  <Group position="apart" mt="md" mb="xs">
-                    <Text weight={1000}>{item.title}</Text>
-                  </Group>
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
 
-                  <Text size="sm" color="dimmed">
-                    {item.description}
-                  </Text>
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
 
-                  <Button
-                    variant="filled"
-                    color="gray"
-                    fullWidth
-                    mt="md"
-                    radius="md"
-                    component="a"
-                    target="_blank"
-                    href={item.url}
-                  >
-                    <IconExternalLink></IconExternalLink> Visit
-                  </Button>
-                </Card>
-              </Center>
-            </div>
-));
+  const backgroundGen = bggenData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
 
-const backgroundGen = bggenData.map((item) => (
-  <div>
-              <Center>
-                <Card shadow="sm" p="lg" radius="md">
-                  <Card.Section>
-                    <Image
-                      src={item.image}
-                      height={160}
-                      alt=""
-                    />
-                  </Card.Section>
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
 
-                  <Group position="apart" mt="md" mb="xs">
-                    <Text weight={1000}>{item.title}</Text>
-                  </Group>
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
 
-                  <Text size="sm" color="dimmed">
-                    {item.description}
-                  </Text>
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
 
-                  <Button
-                    variant="filled"
-                    color="gray"
-                    fullWidth
-                    mt="md"
-                    radius="md"
-                    component="a"
-                    target="_blank"
-                    href={item.url}
-                  >
-                    <IconExternalLink></IconExternalLink> Visit
-                  </Button>
-                </Card>
-              </Center>
-            </div>
-));
+  const DesignApp = DesignAppData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
 
-const DesignApp = DesignAppData.map((item) => (
-  <div>
-              <Center>
-                <Card shadow="sm" p="lg" radius="md">
-                  <Card.Section>
-                    <Image
-                      src={item.image}
-                      height={160}
-                      alt=""
-                    />
-                  </Card.Section>
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
 
-                  <Group position="apart" mt="md" mb="xs">
-                    <Text weight={1000}>{item.title}</Text>
-                  </Group>
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
 
-                  <Text size="sm" color="dimmed">
-                    {item.description}
-                  </Text>
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
 
-                  <Button
-                    variant="filled"
-                    color="gray"
-                    fullWidth
-                    mt="md"
-                    radius="md"
-                    component="a"
-                    target="_blank"
-                    href={item.url}
-                  >
-                    <IconExternalLink></IconExternalLink> Visit
-                  </Button>
-                </Card>
-              </Center>
-            </div>
-));
+  const Fonts = FontsData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
 
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
 
-const Fonts = FontsData.map((item) => (
-  <div>
-              <Center>
-                <Card shadow="sm" p="lg" radius="md">
-                  <Card.Section>
-                    <Image
-                      src={item.image}
-                      height={160}
-                      alt=""
-                    />
-                  </Card.Section>
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
 
-                  <Group position="apart" mt="md" mb="xs">
-                    <Text weight={1000}>{item.title}</Text>
-                  </Group>
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
 
-                  <Text size="sm" color="dimmed">
-                    {item.description}
-                  </Text>
+  const Icons = IconsData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
 
-                  <Button
-                    variant="filled"
-                    color="gray"
-                    fullWidth
-                    mt="md"
-                    radius="md"
-                    component="a"
-                    target="_blank"
-                    href={item.url}
-                  >
-                    <IconExternalLink></IconExternalLink> Visit
-                  </Button>
-                </Card>
-              </Center>
-            </div>
-));
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
 
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
 
-const Icons = IconsData.map((item) => (
-  <div>
-              <Center>
-                <Card shadow="sm" p="lg" radius="md">
-                  <Card.Section>
-                    <Image
-                      src={item.image}
-                      height={160}
-                      alt=""
-                    />
-                  </Card.Section>
-
-                  <Group position="apart" mt="md" mb="xs">
-                    <Text weight={1000}>{item.title}</Text>
-                  </Group>
-
-                  <Text size="sm" color="dimmed">
-                    {item.description}
-                  </Text>
-
-                  <Button
-                    variant="filled"
-                    color="gray"
-                    fullWidth
-                    mt="md"
-                    radius="md"
-                    component="a"
-                    target="_blank"
-                    href={item.url}
-                  >
-                    <IconExternalLink></IconExternalLink> Visit
-                  </Button>
-                </Card>
-              </Center>
-            </div>
-));
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
 
   return (
     <MantineProvider
@@ -334,7 +305,7 @@ const Icons = IconsData.map((item) => (
               {<HeaderMegaMenu></HeaderMegaMenu>}
             </Header>
           }
-          footer={ <MainFooter></MainFooter> }
+          footer={<MainFooter></MainFooter>}
           styles={(theme) => ({
             main: {
               backgroundColor:
@@ -349,7 +320,7 @@ const Icons = IconsData.map((item) => (
 
           <div style={{ height: "120px" }}></div>
           <div id="main"></div>
-          
+
           {/* HOSTING */}
           <h1>
             <IconServerBolt></IconServerBolt> Hosting
@@ -366,7 +337,7 @@ const Icons = IconsData.map((item) => (
             {/* AUTO GENERATED CONTENT */}
             {hosting}
           </SimpleGrid>
-          
+
           {/* BACKGROUND GENERATORS */}
           <h1>
             <IconBrush></IconBrush> Background Generators
@@ -400,8 +371,8 @@ const Icons = IconsData.map((item) => (
             {/* AUTO GENERATED CONTENT */}
             {DesignApp}
           </SimpleGrid>
-          
-            {/* FONTS */}
+
+          {/* FONTS */}
           <h1>
             <IconTextSize></IconTextSize> Fonts
           </h1>
@@ -417,7 +388,7 @@ const Icons = IconsData.map((item) => (
             {/* AUTO GENERATED CONTENT */}
             {Fonts}
           </SimpleGrid>
-          
+
           {/* icons */}
 
           <h1>
@@ -436,8 +407,7 @@ const Icons = IconsData.map((item) => (
             {Icons}
           </SimpleGrid>
 
-            <AffixMain></AffixMain>
-        
+          <AffixMain></AffixMain>
         </AppShell>
       </div>
     </MantineProvider>

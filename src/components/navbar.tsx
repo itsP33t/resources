@@ -115,6 +115,9 @@ import {
               <a href="https://github.com/itsP33t" className={classes.link}>
                 My Github
               </a>
+              <a href="https://github.com/itsP33t/resources" className={classes.link}>
+                Contribute
+              </a>
             </Group>
   
             <Group className={classes.hiddenMobile}>
