@@ -1,6 +1,6 @@
 import { IconArrowUp } from '@tabler/icons-react';
 import { useWindowScroll } from '@mantine/hooks';
-import { Affix, Button, Text, Transition } from '@mantine/core';
+import { Affix, Button, Transition } from '@mantine/core';
 
 export function AffixMain() {
     const [scroll, scrollTo] = useWindowScroll();

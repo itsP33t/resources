@@ -2,7 +2,6 @@ import {
   createStyles,
   Container,
   Text,
-  Button,
   Group,
   UnstyledButton,
   Center,

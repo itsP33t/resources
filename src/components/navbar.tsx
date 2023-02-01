@@ -1,31 +1,17 @@
 import {
     createStyles,
     Header,
-    HoverCard,
     Group,
     Button,
-    UnstyledButton,
     Text,
-    SimpleGrid,
-    ThemeIcon,
-    Anchor,
     Divider,
-    Center,
     Box,
     Burger,
     Drawer,
-    Collapse,
     ScrollArea,
   } from '@mantine/core';
   import { useDisclosure } from '@mantine/hooks';
   import {
-    IconNotification,
-    IconCode,
-    IconBook,
-    IconChartPie3,
-    IconFingerprint,
-    IconCoin,
-    IconChevronDown,
     IconCoffee
   } from '@tabler/icons-react';
   
