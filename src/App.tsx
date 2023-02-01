@@ -37,7 +37,7 @@ import hostingData  from "./data/hosting";
 import bggenData from "./data/backgroundGen";
 import DesignAppData from "./data/DesignApp";
 import FontsData from "./data/Fonts";
-import IconsData from "./data/icons";
+import IconsData from "./data/Icons";
 
 
 export default function App() {
