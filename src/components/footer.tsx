@@ -43,6 +43,16 @@ export function MainFooter() {
           >
             Buy me a coffee
           </Anchor>
+
+          <Anchor<"a">
+            color="dimmed"
+            key={"Contribute"}
+            href={"https://github.com/itsP33t/resources"}
+            onClick={(event) => event.preventDefault()}
+            size="sm"
+          >
+            Contribute
+          </Anchor>
         </Group>
       </Container>
     </div>

@@ -13,6 +13,20 @@ const hostingData = [
     image: "https://cdn.p33t.net/SAPSOFJBEB.png",
     url: "https://vercel.com/",
   },
+  {
+    title: "Linode",
+    description:
+      "Businesses scale faster with a developer-friendly and massively-distributed platform to build, run, and secure cloud workloads.",
+    image: "https://cdn.p33t.net/GFIJGBRKDQ.png",
+    url: "https://www.linode.com/",
+  },
+  {
+    title: "Contabo",
+    description:
+      "Get the Cloud Instances or Dedicated Servers you want - for a price you'll love. Cheapest VPS prices in the market.",
+    image: "https://cdn.p33t.net/QPKXHTNAIR.png",
+    url: "https://contabo.com/",
+  },
 ];
 
 export default hostingData;

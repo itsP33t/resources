@@ -13,6 +13,13 @@ const DesignAppData = [
     image: "https://cdn.p33t.net/YYDRWHZSIM.png",
     url: "https://keyframes.app/",
   },
+  {
+    title: "Spline",
+    description:
+      "Create 3D scenes, edit materials, and model 3D objects. Control the outcome of your design work.",
+    image: "https://cdn.p33t.net/IBQWKTHQPD.png",
+    url: "https://spline.design/",
+  },
 ];
 
 export default DesignAppData;

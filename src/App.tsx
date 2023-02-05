@@ -10,6 +10,7 @@ import {
   Text,
   Button,
   Group,
+  Space,
 } from "@mantine/core";
 
 import {
@@ -19,6 +20,9 @@ import {
   IconPalette,
   IconTextSize,
   IconAlien,
+  IconBrandReact,
+  IconDeviceLaptop,
+  IconHammer,
 } from "@tabler/icons-react";
 
 // components
@@ -33,6 +37,9 @@ import bggenData from "./data/backgroundGen";
 import DesignAppData from "./data/DesignApp";
 import FontsData from "./data/Fonts";
 import IconsData from "./data/Icons";
+import ReactUiFrameworksData from "./data/reactUiFrameworks";
+import MockingToolsData from "./data/MockingTools";
+import ToolsData from "./data/tools";
 
 export default function App() {
   // data mapping
@@ -170,6 +177,106 @@ export default function App() {
   ));
 
   const Icons = IconsData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
+
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
+
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
+
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
+
+  const MockingTools = MockingToolsData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
+
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
+
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
+
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
+
+
+  const ReactUiFrameworks = ReactUiFrameworksData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
+
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
+
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
+
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
+
+  const Tools = ToolsData.map((item) => (
     <div>
       <Center>
         <Card shadow="sm" p="lg" radius="md">
@@ -405,6 +512,62 @@ export default function App() {
           >
             {/* AUTO GENERATED CONTENT */}
             {Icons}
+          </SimpleGrid>
+          
+          {/* React Frameworks */}
+
+          <h1>
+            <IconBrandReact></IconBrandReact> React UI Frameworks
+          </h1>
+          <SimpleGrid
+            cols={3}
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 980, cols: 3, spacing: "md" },
+              { maxWidth: 755, cols: 2, spacing: "sm" },
+              { maxWidth: 600, cols: 1, spacing: "sm" },
+            ]}
+          >
+            {/* AUTO GENERATED CONTENT */}
+            {ReactUiFrameworks}
+          </SimpleGrid>
+          
+          {/* Mocking tools */}
+          
+          <h1>
+            <IconDeviceLaptop></IconDeviceLaptop> Mocking Tools
+          </h1>
+          <SimpleGrid
+            cols={3}
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 980, cols: 3, spacing: "md" },
+              { maxWidth: 755, cols: 2, spacing: "sm" },
+              { maxWidth: 600, cols: 1, spacing: "sm" },
+            ]}
+          >
+            {/* AUTO GENERATED CONTENT */}
+            {MockingTools}
+          </SimpleGrid>
+         
+         {/* tools, category for anything that didnt fit in the other categories */}
+         
+          <h1>
+            <IconHammer></IconHammer> Tools
+          </h1>
+          <Text>For anything that does not fit in the categories</Text>
+          <Space h="md"></Space>
+          <SimpleGrid
+            cols={3}
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 980, cols: 3, spacing: "md" },
+              { maxWidth: 755, cols: 2, spacing: "sm" },
+              { maxWidth: 600, cols: 1, spacing: "sm" },
+            ]}
+          >
+            {/* AUTO GENERATED CONTENT */}
+            {Tools}
           </SimpleGrid>
 
           <AffixMain></AffixMain>
