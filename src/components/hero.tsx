@@ -92,7 +92,7 @@ export function Hero() {
           <h1 className={classes.title}>Most useful WebDev resources</h1>
 
           <Text className={classes.description} color="dimmed">
-            Hey, I'm P33t, a web developer. I'm developing websites for over 7
+            Hey, I'm P33t, a web developer. I'm developing websites for over 8
             years and here is my most useful resources.
           </Text>
 

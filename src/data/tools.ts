@@ -32,6 +32,12 @@ const ToolsData = [
     image: "https://cdn.zenet.host/brave_tg3AcMgSPC.png",
     url: "https://explainshell.com/",
   },
+  {
+    title: "Explain Shell",
+    description: "Scrollbars are an essential component of any website that contains lengthy content. They provide users with a way to navigate through the content with ease",
+    image: "https://cdn.zenet.host/brave_De75lp0wOw.png",
+    url: "https://scrollbar.app/",
+  },
 ];
 
 export default ToolsData;

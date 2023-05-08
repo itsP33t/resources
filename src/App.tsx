@@ -11,6 +11,7 @@ import {
   Button,
   Group,
   Space,
+  Badge
 } from "@mantine/core";
 
 import {
@@ -23,6 +24,7 @@ import {
   IconBrandReact,
   IconDeviceLaptop,
   IconHammer,
+  IconRobot
 } from "@tabler/icons-react";
 
 // components
@@ -40,6 +42,7 @@ import IconsData from "./data/Icons";
 import ReactUiFrameworksData from "./data/reactUiFrameworks";
 import MockingToolsData from "./data/MockingTools";
 import ToolsData from "./data/tools";
+import AIData from "./data/ai";
 
 export default function App() {
   // data mapping
@@ -309,6 +312,40 @@ export default function App() {
     </div>
   ));
 
+
+  const AI = AIData.map((item) => (
+    <div>
+      <Center>
+        <Card shadow="sm" p="lg" radius="md">
+          <Card.Section>
+            <Image src={item.image} height={160} alt="" />
+          </Card.Section>
+
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={1000}>{item.title}</Text>
+          </Group>
+
+          <Text size="sm" color="dimmed">
+            {item.description}
+          </Text>
+
+          <Button
+            variant="filled"
+            color="gray"
+            fullWidth
+            mt="md"
+            radius="md"
+            component="a"
+            target="_blank"
+            href={item.url}
+          >
+            <IconExternalLink></IconExternalLink> Visit
+          </Button>
+        </Card>
+      </Center>
+    </div>
+  ));
+
   return (
     <MantineProvider
       theme={{
@@ -428,6 +465,27 @@ export default function App() {
           <div style={{ height: "120px" }}></div>
           <div id="main"></div>
 
+          {/* AI */}
+          <h1>
+            <Center inline>
+            <IconRobot/> <p style={{paddingRight: "10px"}}>AI</p>
+            <Badge size="sm" variant="filled">Trending</Badge>
+            </Center>
+          </h1>
+          <SimpleGrid
+            cols={3}
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 980, cols: 3, spacing: "md" },
+              { maxWidth: 755, cols: 2, spacing: "sm" },
+              { maxWidth: 600, cols: 1, spacing: "sm" },
+            ]}
+          >
+            {/* AUTO GENERATED CONTENT */}
+            {AI}
+          </SimpleGrid>
+          
+          
           {/* HOSTING */}
           <h1>
             <IconServerBolt></IconServerBolt> Hosting

@@ -27,6 +27,13 @@ const bggenData = [
     image: "https://cdn.zenet.host/brave_dRzq4k88Rk.png",
     url: "https://uigradients.com/",
   },
+  {
+    title: "Hero Patterns",
+    description:
+      "A collection of repeatable SVG background patterns for you to use on your web projects.",
+    image: "https://cdn.zenet.host/brave_XV25cIwAyA.png",
+    url: "https://heropatterns.com/",
+  },
 ];
 
 export default bggenData;
