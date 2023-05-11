@@ -45,8 +45,6 @@ import ToolsData from "./data/tools";
 import AIData from "./data/ai";
 
 export default function App() {
-  // data mapping
-
   const hosting = hostingData.map((item) => (
     <div>
       <Center>
@@ -255,7 +253,11 @@ export default function App() {
           </Card.Section>
 
           <Group position="apart" mt="md" mb="xs">
-            <Text weight={1000}>{item.title}</Text>
+            <Center inline>
+            <Text weight={1000}>{item.title} {' '}
+            {item.title === "Mantine" ? <Badge size="sm" variant="filled">My favorite</Badge>: null}
+            </Text>
+            </Center>
           </Group>
 
           <Text size="sm" color="dimmed">
